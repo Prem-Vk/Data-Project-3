@@ -1,6 +1,7 @@
 import csv
 from matplotlib import pyplot as plt
 import seaborn as sns
+import pylint.lint
 
 yearwise_population = {}
 
@@ -18,3 +19,6 @@ sns.barplot(x=list(yearwise_population.keys()), y=list(yearwise_population.value
 plt.xlabel("Years")
 plt.ylabel("Population")
 plt.show()
+
+pylint_opts = ["question_three.py"]
+pylint.lint.Run(pylint_opts)

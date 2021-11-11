@@ -1,6 +1,7 @@
 from matplotlib import pyplot as plt
 import csv
 import seaborn as sns
+import pylint.lint
 
 years = []
 population = []
@@ -19,3 +20,6 @@ plt.xticks(rotation=90)
 plt.xlabel("Years")
 plt.ylabel("Population")
 plt.show()
+
+pylint_opts = ["question_one.py"]
+pylint.lint.Run(pylint_opts)

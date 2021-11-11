@@ -1,7 +1,7 @@
 import csv
 from matplotlib import pyplot as plt
-import seaborn as sns
 from collections import Counter
+import pylint.lint
 
 countries = []
 population = {}
@@ -69,3 +69,6 @@ plt.legend()
 plt.xticks([r + barwidth for r in range(1, 12)], [str(i) for i in range(2004, 2015)])
 # plt.yticks([0, 5000, 10000, 20000, 40000, 80000, 160000, 260000])
 plt.show()
+
+pylint_opts = ["question_four.py"]
+pylint.lint.Run(pylint_opts)
