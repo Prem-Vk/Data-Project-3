@@ -9,7 +9,7 @@ with open("SAARC.csv", "r") as raw_data:
 
     for line in data_reader:
         if yearwise_population.get(line[2], "NA") == "NA":
-            yearwise_population[line[2]] = 0
+            yearwise_population[line[2]] = int(float(line[3]))
         else:
             yearwise_population[line[2]] += int(float(line[3]))
 
